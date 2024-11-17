@@ -7,13 +7,13 @@ public class Camera_Script : MonoBehaviour
 
     public float xRotation;
     public float yRotation;
-    public float sensitivity = 500f;
+    public float sensitivity = 1000f;
 
     public Transform orientation;
 
     void Start()
     {
-        
+
     }
 
 

@@ -24,6 +24,8 @@ public class Move_Player_Script : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1f;
+
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
     }
