@@ -6535,6 +6535,10 @@ PrefabInstance:
       propertyPath: needkeyaudio
       value: 
       objectReference: {fileID: 1860519277}
+    - target: {fileID: 8767119455805385200, guid: 68a48ba795787fc48afde7165d59c1b5, type: 3}
+      propertyPath: speed
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 9146538252744422346, guid: 68a48ba795787fc48afde7165d59c1b5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.5
@@ -6724,7 +6728,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!108 &1396266628
 Light:
   m_ObjectHideFlags: 0

@@ -5,39 +5,48 @@ using UnityEngine.EventSystems;
 
 public class Move_Player_Script : MonoBehaviour
 {
+    public float speed = 1.5f; // Movement speed
+    public float acceleration = 10f; // How quickly the player reaches target speed
+    public float deceleration = 10f; // How quickly the player stops
 
-    public float speed = 3f;
-
-    
     Rigidbody rb;
-
     Vector3 movedirection;
+    private Vector3 currentVelocity;
     public Transform orientation;
 
-    public float groundDrag;
-    public float playerHeight;
     public LayerMask groundMask;
+    public float playerHeight;
+    public float groundDrag;
     bool grounded;
-
-
 
     void Start()
     {
         // Hide the cursor
         Cursor.visible = false; 
-
+        
         Time.timeScale = 1f;
-
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
     }
 
+        public void OnApplicationFocus()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            // Make the cursor visible
+            Cursor.visible = true; 
+        }
+        // Press Left Mouse Button to hide the cursor again
+        if (Input.GetMouseButtonDown(0))
+        {
+            Cursor.visible = false;
+        }
+    }
 
-    private void Update(){
+    private void Update()
+    {
         OnApplicationFocus();
-
-        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, groundMask);
-        
+        CheckGround();
         ControlSpeed();
         
         if (grounded)
@@ -49,21 +58,43 @@ public class Move_Player_Script : MonoBehaviour
             rb.drag = 0;
         }
     }
-    
-    private void FixedUpdate()
+
+        private void FixedUpdate()
     {
         Player_Movement();
     }
 
-        public void Player_Movement()
+    private void CheckGround()
+    {
+        grounded =  Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, groundMask);
+
+        if (grounded && rb.velocity.y < 0)
+        {
+            rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
+        }
+    }
+
+    public void Player_Movement()
     {
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
+        // Calculate movement direction
         movedirection = orientation.forward * vertical + orientation.right * horizontal;
 
-        rb.AddForce(movedirection.normalized * speed, ForceMode.Force);
+        if (movedirection != Vector3.zero)
+        {
+            // Accelerate toward the desired velocity
+            currentVelocity = Vector3.MoveTowards(currentVelocity, movedirection * speed, acceleration * Time.fixedDeltaTime);
+        }
+        else
+        {
+            // Decelerate to a stop
+            currentVelocity = Vector3.MoveTowards(currentVelocity, Vector3.zero, deceleration * Time.fixedDeltaTime);
+        }
 
+        // Apply the velocity to the rigidbody
+        rb.velocity = new Vector3(currentVelocity.x, rb.velocity.y, currentVelocity.z);
     }
 
     private void ControlSpeed()
@@ -76,21 +107,4 @@ public class Move_Player_Script : MonoBehaviour
             rb.velocity = new Vector3(limitedvel.x, rb.velocity.y, limitedvel.z);
         }
     }
-
-
-    public void OnApplicationFocus()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            // Make the cursor visible
-            Cursor.visible = true; 
-        }
-
-        // Press Left Mouse Button to hide the cursor again
-        if (Input.GetMouseButtonDown(0))
-        {
-            Cursor.visible = false;
-        }
-    }
-    
 }
