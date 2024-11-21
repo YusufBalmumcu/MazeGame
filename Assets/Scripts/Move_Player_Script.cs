@@ -9,7 +9,6 @@ public class Move_Player_Script : MonoBehaviour
     public float speed = 3f;
 
     
-        
     Rigidbody rb;
 
     Vector3 movedirection;
@@ -24,6 +23,9 @@ public class Move_Player_Script : MonoBehaviour
 
     void Start()
     {
+        // Hide the cursor
+        Cursor.visible = false; 
+
         Time.timeScale = 1f;
 
         rb = GetComponent<Rigidbody>();
@@ -32,6 +34,8 @@ public class Move_Player_Script : MonoBehaviour
 
 
     private void Update(){
+        OnApplicationFocus();
+
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, groundMask);
         
         ControlSpeed();
@@ -72,4 +76,21 @@ public class Move_Player_Script : MonoBehaviour
             rb.velocity = new Vector3(limitedvel.x, rb.velocity.y, limitedvel.z);
         }
     }
+
+
+    public void OnApplicationFocus()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            // Make the cursor visible
+            Cursor.visible = true; 
+        }
+
+        // Press Left Mouse Button to hide the cursor again
+        if (Input.GetMouseButtonDown(0))
+        {
+            Cursor.visible = false;
+        }
+    }
+    
 }
