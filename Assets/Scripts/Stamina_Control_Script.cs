@@ -18,8 +18,8 @@ public class Stamina_Control_Script : MonoBehaviour
     [SerializeField] private float staminaRegen = 0.5f;
 
     public Image staminaProgressUI;
-    public CanvasGroup sliderCanvasGroup;
 
+    public AudioSource breathingSound;
 
     private Move_Player_Script movePlayerScript;
 
@@ -35,7 +35,6 @@ public class Stamina_Control_Script : MonoBehaviour
         {
             RegenerateStamina();
         }
-
         UpdateStaminaBar();
     }
 
@@ -59,6 +58,7 @@ public class Stamina_Control_Script : MonoBehaviour
         if (playerStamina <= 0)
         {
             StopSprinting();
+            breathingSound.Play();
         }
     }
 

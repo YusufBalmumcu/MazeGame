@@ -55,7 +55,7 @@ public class Collision_Script : MonoBehaviour
         }
 
         if(other.gameObject.tag == "door" && keycollected == true)
-        { 
+        {
             other.gameObject.transform.rotation = Quaternion.Euler(0f, -90f, 0f);
             Invoke("WinScene",1f);
         }

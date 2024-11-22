@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Item_Script : MonoBehaviour
 {
+
+    
+
     public GameObject key;
     public GameObject snowball;
 

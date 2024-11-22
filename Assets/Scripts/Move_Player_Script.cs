@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -11,17 +12,13 @@ public class Move_Player_Script : MonoBehaviour
 
     public float speed = 1.5f; 
 
-    public float acceleration = 10f; // How quickly the player reaches target speed
-    public float deceleration = 10f; // How quickly the player stops
+    private float acceleration = 10f; // How quickly the player reaches target speed
+    private float deceleration = 10f; // How quickly the player stops
 
-    public void SetRunSpeed(float val)
-    {
-        speed = val;
-    }
 
     Rigidbody rb;
     Vector3 movedirection;
-    private Vector3 currentVelocity;
+    public Vector3 currentVelocity;
     public Transform orientation;
 
     public LayerMask groundMask;
@@ -60,7 +57,21 @@ public class Move_Player_Script : MonoBehaviour
         OnApplicationFocus();
         CheckGround();
         ControlSpeed();
+        HandleSprintInput();
+        ApplyGroundDrag();
+
         
+    }
+
+        private void FixedUpdate()
+    {
+        Player_Movement();
+    }
+
+
+
+    private void ApplyGroundDrag()
+    {
         if (grounded)
         {
             rb.drag = groundDrag;
@@ -69,14 +80,7 @@ public class Move_Player_Script : MonoBehaviour
         {
             rb.drag = 0;
         }
-        HandleSprintInput();
-    }
-
-        private void FixedUpdate()
-    {
-        Player_Movement();
-        Debug.Log(speed);
-    }
+    } 
 
     private void CheckGround()
     {
@@ -111,8 +115,6 @@ public class Move_Player_Script : MonoBehaviour
             }
 
         }
-        
-
 
         // Calculate movement direction
         movedirection = orientation.forward * vertical + orientation.right * horizontal;
