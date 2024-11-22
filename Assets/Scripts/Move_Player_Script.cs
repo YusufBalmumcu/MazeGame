@@ -5,9 +5,19 @@ using UnityEngine.EventSystems;
 
 public class Move_Player_Script : MonoBehaviour
 {
-    public float speed = 1.5f; // Movement speed
+
+    public Stamina_Control_Script staminaControlScript;
+
+
+    public float speed = 1.5f; 
+
     public float acceleration = 10f; // How quickly the player reaches target speed
     public float deceleration = 10f; // How quickly the player stops
+
+    public void SetRunSpeed(float val)
+    {
+        speed = val;
+    }
 
     Rigidbody rb;
     Vector3 movedirection;
@@ -21,6 +31,8 @@ public class Move_Player_Script : MonoBehaviour
 
     void Start()
     {
+        staminaControlScript = GetComponent<Stamina_Control_Script>();
+
         // Hide the cursor
         Cursor.visible = false; 
         
@@ -57,11 +69,13 @@ public class Move_Player_Script : MonoBehaviour
         {
             rb.drag = 0;
         }
+        HandleSprintInput();
     }
 
         private void FixedUpdate()
     {
         Player_Movement();
+        Debug.Log(speed);
     }
 
     private void CheckGround()
@@ -78,6 +92,27 @@ public class Move_Player_Script : MonoBehaviour
     {
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
+
+        bool playerIsWalking = !Input.GetKey(KeyCode.LeftShift);
+        if (playerIsWalking)
+        {
+            staminaControlScript.playerIsSprinting = false;
+        }
+        else if(!playerIsWalking && currentVelocity.sqrMagnitude > 0)
+        {
+            if (staminaControlScript.playerStamina > 0)
+            {
+                staminaControlScript.playerIsSprinting = true;
+                staminaControlScript.Sprint();
+            }
+            else
+            {
+                playerIsWalking = true;
+            }
+
+        }
+        
+
 
         // Calculate movement direction
         movedirection = orientation.forward * vertical + orientation.right * horizontal;
@@ -105,6 +140,20 @@ public class Move_Player_Script : MonoBehaviour
         {
             Vector3 limitedvel = flatvel.normalized * speed;
             rb.velocity = new Vector3(limitedvel.x, rb.velocity.y, limitedvel.z);
+        }
+    }
+
+    private void HandleSprintInput()
+    {
+        if (Input.GetKey(KeyCode.LeftShift) && staminaControlScript.CanSprint())
+        {
+            // Sprinting
+            staminaControlScript.Sprint();
+        }
+        else
+        {
+            // Walking
+            staminaControlScript.StopSprinting();
         }
     }
 }
