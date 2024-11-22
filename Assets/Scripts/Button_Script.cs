@@ -5,17 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class Button_Script : MonoBehaviour
 {
-    void Start()
-    {
-        
-    }
-    void Update()
-    {
-        
-    }
-
     public void Game()
     {
+        // Switch to the scene with build index 1
         SceneManager.LoadScene(1);
     }
 }

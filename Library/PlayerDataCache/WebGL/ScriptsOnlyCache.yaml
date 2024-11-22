@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - Battery_Control_Script
     - Button_Script
     - Camera_Script
     - Collision_Script
@@ -97,6 +98,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
     - Class: 74
@@ -143,6 +146,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 6058}
     - Class: 114
       Script: {instanceID: 7286}
+    - Class: 114
+      Script: {instanceID: 7396}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -225,7 +230,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6058}
     - Class: 114
-      Script: {instanceID: 7396}
+      Script: {instanceID: 7398}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -298,7 +303,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6058}
     - Class: 114
-      Script: {instanceID: 7396}
+      Script: {instanceID: 7398}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -357,7 +362,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6058}
     - Class: 114
-      Script: {instanceID: 7396}
+      Script: {instanceID: 7398}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -653,7 +658,7 @@ ScriptsOnlyBuild:
     className: UnityOnMouseDragMessageListener
   - hash:
       serializedVersion: 2
-      Hash: b23db6e3443e1ca17c926aed5f32034e
+      Hash: ad2330c46b5c3300ede53c758424bc1f
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Item_Script
@@ -761,7 +766,7 @@ ScriptsOnlyBuild:
     className: UnityOnPointerExitMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 41eb837280d5961a2bcdb390d25da41a
+      Hash: 5f2d003ecebac0c3ff6839aec5d1d2de
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Camera_Script
@@ -899,7 +904,7 @@ ScriptsOnlyBuild:
     className: UnityOnPointerClickMessageListener
   - hash:
       serializedVersion: 2
-      Hash: b688faed76611212de6a0fff57e04b2d
+      Hash: 49438e331fd3def60c8078aadefd43b4
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Move_Player_Script
@@ -1073,7 +1078,7 @@ ScriptsOnlyBuild:
     className: StateGraphAsset
   - hash:
       serializedVersion: 2
-      Hash: 66a0716530aeb9a8992e9d1d73554050
+      Hash: afffb7aec6bbb75038c29bdac8bff248
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Collision_Script
@@ -1325,7 +1330,7 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
-      Hash: 9dfebbb6d0d1b95281fb5afdd4504b9f
+      Hash: 0a542e422a5a043f0ee3c5bb2f7ee035
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Stamina_Control_Script
@@ -1353,6 +1358,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: DropdownSample
+  - hash:
+      serializedVersion: 2
+      Hash: e59e910fc4c8c7ed0de069ff2b0bd4f1
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Battery_Control_Script
   - hash:
       serializedVersion: 2
       Hash: 6a3730ed00f00863107ce4143305a696

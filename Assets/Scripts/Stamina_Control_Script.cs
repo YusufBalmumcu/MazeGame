@@ -5,90 +5,94 @@ using UnityEngine.UI;
 
 public class Stamina_Control_Script : MonoBehaviour
 {
+    // Player's current stamina and maximum stamina values
     public float playerStamina = 100f;
     [SerializeField]
     private float maxStamina = 100f;
-    public bool staminaRegenerated = true;
-    public bool playerIsSprinting = false;
+    public bool staminaRegenerated = true; // Whether stamina is regenerating
+    public bool playerIsSprinting = false; // Whether the player is sprinting
 
+    // Player movement speeds for walking and sprinting
     public float walkSpeed = 1.5f;
     public float sprintSpeed = 3f; 
 
-    [SerializeField] private float staminaDrain = 0.5f;
+    // Stamina consumption and regeneration rates
+    [SerializeField] private float staminaDrain = 0.5f; 
     [SerializeField] private float staminaRegen = 0.5f;
 
+    // UI element for showing stamina progress
     public Image staminaProgressUI;
 
+    // Sound played when stamina runs out and breathing intensifies
     public AudioSource breathingSound;
 
+    // Reference to the Move_Player_Script for controlling player speed
     private Move_Player_Script movePlayerScript;
 
-    private void Start()
+    void Start()
     {
+        // Initialize the reference to Move_Player_Script
         movePlayerScript = GetComponent<Move_Player_Script>();
-
     }
 
-    private void Update()
+    void Update()
     {
+        // If the player is not sprinting, regenerate stamina
         if (!playerIsSprinting)
         {
             RegenerateStamina();
         }
+
+        // Update the stamina progress bar UI
         UpdateStaminaBar();
     }
 
-        private void RegenerateStamina()
+    // Regenerates stamina if it is not at maximum
+    private void RegenerateStamina()
     {
         if (playerStamina < maxStamina)
         {
-            playerStamina += staminaRegen * Time.deltaTime;
-            playerStamina = Mathf.Clamp(playerStamina, 0, maxStamina);
+            playerStamina += staminaRegen * Time.deltaTime; // Regenerate stamina over time
+            playerStamina = Mathf.Clamp(playerStamina, 0, maxStamina); // Ensure stamina stays within valid bounds
         }
     }
 
+    // Starts sprinting by draining stamina and increasing speed
     public void Sprint()
     {
-        playerIsSprinting = true;
-        playerStamina -= staminaDrain * Time.deltaTime;
-        playerStamina = Mathf.Clamp(playerStamina, 0, maxStamina);
+        playerIsSprinting = true; // Mark the player as sprinting
+        playerStamina -= staminaDrain * Time.deltaTime; // Drain stamina over time
+        playerStamina = Mathf.Clamp(playerStamina, 0, maxStamina); // Ensure stamina stays within valid bounds
 
-        movePlayerScript.speed = sprintSpeed;
+        movePlayerScript.speed = sprintSpeed; // Increase movement speed for sprinting
 
         if (playerStamina <= 0)
         {
+            // Stop sprinting if stamina is depleted
             StopSprinting();
-            breathingSound.Play();
+            breathingSound.Play(); // Play a breathing sound when stamina runs out
         }
     }
 
+    // Checks if the player has enough stamina to sprint
     public bool CanSprint()
     {
-        if(playerStamina >= 0)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return playerStamina > 0; // Return true if stamina is available, false otherwise
     }
 
-        public void StopSprinting()
+    // Stops sprinting by restoring the player’s speed to normal walking speed
+    public void StopSprinting()
     {
-        playerIsSprinting = false;
-        movePlayerScript.speed = walkSpeed;
+        playerIsSprinting = false; // Mark the player as not sprinting
+        movePlayerScript.speed = walkSpeed; // Restore the walking speed
     }
 
-
+    // Updates the stamina bar UI to reflect current stamina
     private void UpdateStaminaBar()
     {
         if (staminaProgressUI != null)
         {
-            staminaProgressUI.fillAmount = playerStamina / maxStamina;
+            staminaProgressUI.fillAmount = playerStamina / maxStamina; // Update the stamina UI as a percentage
         }
     }
-
-
-
 }

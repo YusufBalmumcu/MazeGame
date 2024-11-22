@@ -626,6 +626,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Cursor_SetCursor_Injected();
 		Register_UnityEngine_Cursor_SetCursor_Injected();
 
+		//System.Void UnityEngine.Cursor::set_lockState(UnityEngine.CursorLockMode)
+		void Register_UnityEngine_Cursor_set_lockState();
+		Register_UnityEngine_Cursor_set_lockState();
+
 		//System.Void UnityEngine.Cursor::set_visible(System.Boolean)
 		void Register_UnityEngine_Cursor_set_visible();
 		Register_UnityEngine_Cursor_set_visible();

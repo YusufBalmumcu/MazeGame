@@ -9,6 +9,7 @@ TagManager:
   - ghost
   - player
   - snowball
+  - battery
   layers:
   - Default
   - TransparentFX

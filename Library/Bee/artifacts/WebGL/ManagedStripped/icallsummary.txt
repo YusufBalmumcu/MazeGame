@@ -130,6 +130,7 @@ UnityEngine.Cubemap::get_isReadable
 UnityEngine.CubemapArray::Internal_CreateImpl
 UnityEngine.CubemapArray::get_isReadable
 UnityEngine.Cursor::SetCursor_Injected
+UnityEngine.Cursor::set_lockState
 UnityEngine.Cursor::set_visible
 UnityEngine.Cursor::get_lockState
 UnityEngine.Debug::ExtractStackTraceNoAlloc
