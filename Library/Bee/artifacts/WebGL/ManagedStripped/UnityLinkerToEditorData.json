@@ -463,6 +463,7 @@
           {
             "name": "Sprite",
             "scenes": [
+              "Assets/Scenes/GameScene.unity",
               "Assets/Scenes/LoseScene.unity",
               "Assets/Scenes/MenuScene.unity",
               "Assets/Scenes/WinScene.unity"
@@ -916,7 +917,9 @@
           },
           {
             "name": "CanvasGroup",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/GameScene.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },

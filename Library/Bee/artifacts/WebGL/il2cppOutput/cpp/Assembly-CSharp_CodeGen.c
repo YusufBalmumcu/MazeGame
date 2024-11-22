@@ -48,13 +48,24 @@ extern void U3CGhostStopBreakU3Ed__8_System_Collections_IEnumerator_get_Current_
 extern void Item_Script_Start_m825A42AF9543866182E2E20DE7D856304301002F (void);
 extern void Item_Script_Update_m24D105C495F9EC76C9CB4390CAFFA6DE2B30D712 (void);
 extern void Item_Script__ctor_mC1D4265433F93AF96AF106F1BBB588FB107D47F2 (void);
+extern void Move_Player_Script_SetRunSpeed_m60983ABB2226D57D122C474E965CDC8BA57BC482 (void);
 extern void Move_Player_Script_Start_mBEE83B3F10BA8F4B00A901FDEE4CDE4F5F28C770 (void);
+extern void Move_Player_Script_OnApplicationFocus_m1EB5ED71A725708B229682BB24BF8E885D65F705 (void);
 extern void Move_Player_Script_Update_mCC73BE995E9DFC68C1647FD3452593F2EE297050 (void);
 extern void Move_Player_Script_FixedUpdate_m3CE77DBD6CE362E27F2D68CC0F7FE35B6F19C791 (void);
+extern void Move_Player_Script_CheckGround_m4484A01BE3BD66A1BE29F479939BAD514784C7D9 (void);
 extern void Move_Player_Script_Player_Movement_mB13AE304B23A95F6767CBF795B906AEC7D3F371B (void);
 extern void Move_Player_Script_ControlSpeed_m271A4AAE0455315E808BD4F398368507381D7A50 (void);
-extern void Move_Player_Script_OnApplicationFocus_m1EB5ED71A725708B229682BB24BF8E885D65F705 (void);
+extern void Move_Player_Script_HandleSprintInput_m65116381855D2358C41759C80A2C4279A31548AC (void);
 extern void Move_Player_Script__ctor_m2772D973681D7AC256F0E7843300B8C8036E9812 (void);
+extern void Stamina_Control_Script_Start_mE903011B7CDAC1DCDA05680E34EDB4E737DFB4BC (void);
+extern void Stamina_Control_Script_Update_mDE1AA316806CE04B970B533553108472D240797A (void);
+extern void Stamina_Control_Script_RegenerateStamina_m18DE6FE664088DC855581448CF5CA6B5D370C22F (void);
+extern void Stamina_Control_Script_Sprint_m01993BF074AE2EBAA8AA185AC309EDD6591898C1 (void);
+extern void Stamina_Control_Script_CanSprint_m3342BBF21917C37FFBE8F85A63CE47CD5B862296 (void);
+extern void Stamina_Control_Script_StopSprinting_mEAA438EA53B796E69583F9A140CCE84C0BC45B0A (void);
+extern void Stamina_Control_Script_UpdateStaminaBar_mE0883B7BEEBEFD0FBC6F73574F562146AE108BD9 (void);
+extern void Stamina_Control_Script__ctor_m2E2CB51B701D5378FE4B5B29A8754EB2531801F6 (void);
 extern void ChatController_OnEnable_m025CE203564D82A1CDCE5E5719DB07E29811D0B7 (void);
 extern void ChatController_OnDisable_mD49D03719CAEBB3F59F24A7FA8F4FD30C8B54E46 (void);
 extern void ChatController_AddToChatOutput_m9AB8FA8A32EA23F2E55795D8301ED0BF6A59F722 (void);
@@ -322,7 +333,7 @@ extern void U3CWarpTextU3Ed__8_MoveNext_mCE7A826C5E4854C2C509C77BD18F5A9B6D691B0
 extern void U3CWarpTextU3Ed__8_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mD80368E9B7E259311C03E406B75161ED6F7618E3 (void);
 extern void U3CWarpTextU3Ed__8_System_Collections_IEnumerator_Reset_m07746C332D2D8CE5DEA59873C26F2FAD4B369B42 (void);
 extern void U3CWarpTextU3Ed__8_System_Collections_IEnumerator_get_Current_m71D7F84D9DEF63BEC6B44866515DDCF35B142A19 (void);
-static Il2CppMethodPointer s_methodPointers[310] = 
+static Il2CppMethodPointer s_methodPointers[321] = 
 {
 	Button_Script_Start_m6443E252BE8EF40FD0D8953BBA181941ED120EC3,
 	Button_Script_Update_m38097426752136831AC1EA38C059632017EB1384,
@@ -360,13 +371,24 @@ static Il2CppMethodPointer s_methodPointers[310] =
 	Item_Script_Start_m825A42AF9543866182E2E20DE7D856304301002F,
 	Item_Script_Update_m24D105C495F9EC76C9CB4390CAFFA6DE2B30D712,
 	Item_Script__ctor_mC1D4265433F93AF96AF106F1BBB588FB107D47F2,
+	Move_Player_Script_SetRunSpeed_m60983ABB2226D57D122C474E965CDC8BA57BC482,
 	Move_Player_Script_Start_mBEE83B3F10BA8F4B00A901FDEE4CDE4F5F28C770,
+	Move_Player_Script_OnApplicationFocus_m1EB5ED71A725708B229682BB24BF8E885D65F705,
 	Move_Player_Script_Update_mCC73BE995E9DFC68C1647FD3452593F2EE297050,
 	Move_Player_Script_FixedUpdate_m3CE77DBD6CE362E27F2D68CC0F7FE35B6F19C791,
+	Move_Player_Script_CheckGround_m4484A01BE3BD66A1BE29F479939BAD514784C7D9,
 	Move_Player_Script_Player_Movement_mB13AE304B23A95F6767CBF795B906AEC7D3F371B,
 	Move_Player_Script_ControlSpeed_m271A4AAE0455315E808BD4F398368507381D7A50,
-	Move_Player_Script_OnApplicationFocus_m1EB5ED71A725708B229682BB24BF8E885D65F705,
+	Move_Player_Script_HandleSprintInput_m65116381855D2358C41759C80A2C4279A31548AC,
 	Move_Player_Script__ctor_m2772D973681D7AC256F0E7843300B8C8036E9812,
+	Stamina_Control_Script_Start_mE903011B7CDAC1DCDA05680E34EDB4E737DFB4BC,
+	Stamina_Control_Script_Update_mDE1AA316806CE04B970B533553108472D240797A,
+	Stamina_Control_Script_RegenerateStamina_m18DE6FE664088DC855581448CF5CA6B5D370C22F,
+	Stamina_Control_Script_Sprint_m01993BF074AE2EBAA8AA185AC309EDD6591898C1,
+	Stamina_Control_Script_CanSprint_m3342BBF21917C37FFBE8F85A63CE47CD5B862296,
+	Stamina_Control_Script_StopSprinting_mEAA438EA53B796E69583F9A140CCE84C0BC45B0A,
+	Stamina_Control_Script_UpdateStaminaBar_mE0883B7BEEBEFD0FBC6F73574F562146AE108BD9,
+	Stamina_Control_Script__ctor_m2E2CB51B701D5378FE4B5B29A8754EB2531801F6,
 	ChatController_OnEnable_m025CE203564D82A1CDCE5E5719DB07E29811D0B7,
 	ChatController_OnDisable_mD49D03719CAEBB3F59F24A7FA8F4FD30C8B54E46,
 	ChatController_AddToChatOutput_m9AB8FA8A32EA23F2E55795D8301ED0BF6A59F722,
@@ -635,7 +657,7 @@ static Il2CppMethodPointer s_methodPointers[310] =
 	U3CWarpTextU3Ed__8_System_Collections_IEnumerator_Reset_m07746C332D2D8CE5DEA59873C26F2FAD4B369B42,
 	U3CWarpTextU3Ed__8_System_Collections_IEnumerator_get_Current_m71D7F84D9DEF63BEC6B44866515DDCF35B142A19,
 };
-static const int32_t s_InvokerIndices[310] = 
+static const int32_t s_InvokerIndices[321] = 
 {
 	4447,
 	4447,
@@ -673,10 +695,21 @@ static const int32_t s_InvokerIndices[310] =
 	4447,
 	4447,
 	4447,
+	3612,
 	4447,
 	4447,
 	4447,
 	4447,
+	4447,
+	4447,
+	4447,
+	4447,
+	4447,
+	4447,
+	4447,
+	4447,
+	4447,
+	4274,
 	4447,
 	4447,
 	4447,
@@ -952,7 +985,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	310,
+	321,
 	s_methodPointers,
 	0,
 	NULL,
