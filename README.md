@@ -117,5 +117,5 @@ In Ghost Chase, players take control of a character exploring a maze while manag
    ```bash
    git clone https://github.com/YusufBalmumcu/MazeGame
 
-  Or use the link down below to try it at itch.io
-  Link: https://waxer16.itch.io/maze-of-the-ghost
+  - Or use the link down below to try it at itch.io
+  - Link: https://waxer16.itch.io/maze-of-the-ghost
