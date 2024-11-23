@@ -97,14 +97,14 @@ In Maze Of the Ghost, players take control of a character exploring a maze while
 
 
 - **Assets**:
-
+- 3d Battery Model From: [https://assetstore.unity.com/packages/3d/props/mobile-power-ups-free-vol-1-36106](https://assetstore.unity.com/packages/3d/props/mobile-power-ups-free-vol-1-36106)
 
 
 
   
 - **Audio**: 
-
-
+- Walking Sound Effect: [https://www.youtube.com/watch?v=MIxY154tBcg&ab_channel=SoundKind](https://www.youtube.com/watch?v=y3MVUQnIsoM&ab_channel=HankTank)
+- Bretahing Sound Effect: [https://www.youtube.com/watch?v=MIxY154tBcg&ab_channel=SoundKind](https://www.youtube.com/watch?v=MIxY154tBcg&ab_channel=SoundKind)
 
 
 
