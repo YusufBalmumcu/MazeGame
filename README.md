@@ -6,7 +6,7 @@ Welcome to **Maze Of the Ghost**, a survival game where the player must navigate
 
 ## 🎮 Gameplay Overview
 
-In Ghost Chase, players take control of a character exploring a maze while managing stamina, using snowballs to stop enemy, and collecting key item to unlock the exit.
+In Maze Of the Ghost, players take control of a character exploring a maze while managing stamina, using snowballs to stop enemy, and collecting key item to unlock the exit.
 
 ---
 
