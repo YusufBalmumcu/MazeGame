@@ -89,11 +89,19 @@ In Maze Of the Ghost, players take control of a character exploring a maze while
 ## 📜 Credits
 
 - **Game Development**: [Yusuf Balmumcu, Ahmet Furkan Öcel]
-
-
-
-
-
+- Grup Üyesi #1 -22360859001 -Yusuf Balmumcu
+- Vertical Horizontal girdisi ve Orientation ile karakter hareketi (Vector3.MoveTowards) Move_Player_Script.cs:75
+- Sürtünme için yere teması tespit etme (Physics.Raycast) Move_Player_Script.cs:65
+- First Person kamera kontrolü (transform.totation,orientation.rotation) Camera_Script.cs:38
+- Kameranın yukarı aşağı hareketi ile yürüme animasyonu (transform.localPosition) Camera_Script.cs:52
+- Oyuncunun Stamina ve Bataryasının azaltılması (IEnumerator içinde .fillamount) Battery_Control_Script.cs:42, Stamina_Control_Script.cs:88
+- Grup Üyesi #2 -223608590  -Ahmet Furkan Öcel
+- Item alabilme (OnTriggerEnter) Collision_Script.cs:60
+- Item ları oyunda döndürme (transform.Rotate) Item_Script.cs:16
+- Kartopu Hayalet Etkileşimi (OnTriggerEnter) Ghost_Script.cs:29
+- Hayaletin oyuncuya doğru hareketi (transform.rotation,transform.position) Ghost_Script.cs:17
+- Kapının anahtar kontrolü (OnTriggerEnter) Collision_Script.cs:70, 76
+- Oyuncunun kar topunu atması (AddForce) Collision_Script.cs:42
 
 
 - **Assets**:
