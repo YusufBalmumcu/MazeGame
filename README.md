@@ -98,14 +98,15 @@ In Maze Of the Ghost, players take control of a character exploring a maze while
 
 - **Assets**:
 - 3d Battery Model From: [https://assetstore.unity.com/packages/3d/props/mobile-power-ups-free-vol-1-36106](https://assetstore.unity.com/packages/3d/props/mobile-power-ups-free-vol-1-36106)
-
-
-
+- 3d Ghost Model From: [https://assetstore.unity.com/packages/3d/characters/little-ghost-lowpoly-free-271926](https://assetstore.unity.com/packages/3d/characters/little-ghost-lowpoly-free-271926)
+- 3d Key Model From: [https://assetstore.unity.com/packages/3d/props/rust-key-167590](https://assetstore.unity.com/packages/3d/props/rust-key-167590)
+- 3d Snowball Model From: [https://assetstore.unity.com/packages/2d/textures-materials/water/stylize-snow-texture-153579](https://assetstore.unity.com/packages/2d/textures-materials/water/stylize-snow-texture-153579)
+- Sky Texture From: [https://assetstore.unity.com/packages/2d/textures-materials/sky/allsky-free-10-sky-skybox-set-146014](https://assetstore.unity.com/packages/2d/textures-materials/sky/allsky-free-10-sky-skybox-set-146014)
   
 - **Audio**: 
 - Walking Sound Effect: [https://www.youtube.com/watch?v=y3MVUQnIsoM&ab_channel=HankTank](https://www.youtube.com/watch?v=y3MVUQnIsoM&ab_channel=HankTank)
 - Bretahing Sound Effect: [https://www.youtube.com/watch?v=MIxY154tBcg&ab_channel=SoundKind](https://www.youtube.com/watch?v=MIxY154tBcg&ab_channel=SoundKind)
-
+- Game Music From: [https://assetstore.unity.com/packages/audio/music/rock/halloween-game-music-pack-235870#content](https://assetstore.unity.com/packages/audio/music/rock/halloween-game-music-pack-235870#content)
 
 
 
