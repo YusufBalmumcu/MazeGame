@@ -29,70 +29,68 @@ public class Stamina_Control_Script : MonoBehaviour
     // Reference to the Move_Player_Script for controlling player speed
     private Move_Player_Script movePlayerScript;
 
+   
     void Start()
     {
-        // Initialize the reference to Move_Player_Script
+        // Initializes player movement reference.
         movePlayerScript = GetComponent<Move_Player_Script>();
     }
 
     void Update()
     {
-        // If the player is not sprinting, regenerate stamina
+        // Handles stamina regeneration and updates the stamina UI.
         if (!playerIsSprinting)
         {
             RegenerateStamina();
         }
-
-        // Update the stamina progress bar UI
         UpdateStaminaBar();
     }
 
-    // Regenerates stamina if it is not at maximum
     private void RegenerateStamina()
     {
+        // Regenerates stamina when it is not at the maximum.
         if (playerStamina < maxStamina)
         {
-            playerStamina += staminaRegen * Time.deltaTime; // Regenerate stamina over time
-            playerStamina = Mathf.Clamp(playerStamina, 0, maxStamina); // Ensure stamina stays within valid bounds
+            playerStamina += staminaRegen * Time.deltaTime;
+            playerStamina = Mathf.Clamp(playerStamina, 0, maxStamina);
         }
     }
 
-    // Starts sprinting by draining stamina and increasing speed
     public void Sprint()
     {
-        playerIsSprinting = true; // Mark the player as sprinting
-        playerStamina -= staminaDrain * Time.deltaTime; // Drain stamina over time
-        playerStamina = Mathf.Clamp(playerStamina, 0, maxStamina); // Ensure stamina stays within valid bounds
+        // Handles stamina drain and speed increase while sprinting.
+        playerIsSprinting = true;
+        playerStamina -= staminaDrain * Time.deltaTime;
+        playerStamina = Mathf.Clamp(playerStamina, 0, maxStamina);
 
-        movePlayerScript.speed = sprintSpeed; // Increase movement speed for sprinting
+        movePlayerScript.speed = sprintSpeed;
 
         if (playerStamina <= 0)
         {
-            // Stop sprinting if stamina is depleted
             StopSprinting();
-            breathingSound.Play(); // Play a breathing sound when stamina runs out
+            breathingSound.Play();
         }
     }
 
-    // Checks if the player has enough stamina to sprint
     public bool CanSprint()
     {
-        return playerStamina > 0; // Return true if stamina is available, false otherwise
+        // Checks if there is enough stamina to sprint.
+        return playerStamina > 0;
     }
 
-    // Stops sprinting by restoring the player’s speed to normal walking speed
     public void StopSprinting()
     {
-        playerIsSprinting = false; // Mark the player as not sprinting
-        movePlayerScript.speed = walkSpeed; // Restore the walking speed
+        // Resets sprinting state and restores normal walking speed.
+        playerIsSprinting = false;
+        movePlayerScript.speed = walkSpeed;
     }
 
-    // Updates the stamina bar UI to reflect current stamina
     private void UpdateStaminaBar()
     {
+        // Updates the stamina UI to reflect the current stamina value.
         if (staminaProgressUI != null)
         {
-            staminaProgressUI.fillAmount = playerStamina / maxStamina; // Update the stamina UI as a percentage
+            staminaProgressUI.fillAmount = playerStamina / maxStamina;
         }
     }
 }

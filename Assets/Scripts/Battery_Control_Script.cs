@@ -22,37 +22,31 @@ public class Battery_Control_Script : MonoBehaviour
 
     private void Start()
     {
-        // Start the coroutine to periodically drain the battery
+        // Start draining the battery over time
         StartCoroutine(DrainBattery());
     }
 
     private void Update()
     {
-        // Check the player's battery life
+        // Enable or disable the flashlight based on battery life
         if (playerBatteryLife <= 0)
         {
-            // Turn off the flashlight if the battery is empty
             flashlight.SetActive(false);
         }
         else if (playerBatteryLife > 0)
         {
-            // Turn on the flashlight if the battery is not empty
             flashlight.SetActive(true);
         }
     }
 
     private IEnumerator DrainBattery()
     {
-        // Continuously drain the battery while the player's battery life is greater than 0
+        // Periodically reduce the player's battery life
         while (playerBatteryLife > 0)
         {
-            // Wait for the specified drain interval
             yield return new WaitForSeconds(batteryDrainInterval);
-
-            // Decrease the battery life
-            playerBatteryLife--;
-
-            // Update the UI to reflect the current battery level
+            playerBatteryLife--; 
+            // Update the UI to reflect the remaining battery level
             batteryProgressUI.fillAmount = (float)playerBatteryLife / (float)maxBatteryLife;
         }
     }
