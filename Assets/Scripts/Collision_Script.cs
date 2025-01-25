@@ -11,7 +11,9 @@ public class Collision_Script : MonoBehaviour
     // Audio sources and UI elements
     public AudioSource gamemusic;
     public AudioSource keyaudio;
+    public AudioSource itempickupaudio;
     public AudioSource needkeyaudio;
+    public AudioSource dooropenaudio;
     public GameObject NeedKeyText;
 
     public bool keycollected = false; // Tracks if the key is collected
@@ -69,6 +71,7 @@ public class Collision_Script : MonoBehaviour
 
         if (other.gameObject.tag == "door" && keycollected == true)
         {
+            dooropenaudio.Play();
             other.gameObject.transform.rotation = Quaternion.Euler(0f, -90f, 0f);
             Invoke("WinScene", 1f);
         }
@@ -85,6 +88,7 @@ public class Collision_Script : MonoBehaviour
             Destroy(other.gameObject);
             currentSnowballs++;
             UpdateSnowballText();
+            itempickupaudio.Play();
         }
 
         if (other.gameObject.tag == "ghost")
@@ -98,6 +102,7 @@ public class Collision_Script : MonoBehaviour
         {
             Debug.Log("Battery Collected");
             Destroy(other.gameObject);
+            itempickupaudio.Play();
             batteryControlScript.playerBatteryLife++;
             batteryControlScript.batteryProgressUI.fillAmount = (float)batteryControlScript.playerBatteryLife / (float)batteryControlScript.maxBatteryLife;
         }
