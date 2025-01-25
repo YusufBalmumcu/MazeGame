@@ -339,6 +339,8 @@
 "Assets/Scripts/Ghost_Script.cs"
 "Assets/Scripts/Item_Script.cs"
 "Assets/Scripts/Move_Player_Script.cs"
+"Assets/Scripts/Music_Script.cs"
+"Assets/Scripts/Pause_Menu_Script.cs"
 "Assets/Scripts/Stamina_Control_Script.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01_UGUI.cs"
