@@ -13,7 +13,7 @@ In Maze Of the Ghost, players take control of a character exploring a maze while
 ## 📋 Features
 
 ### Core Gameplay
-- **Exploration and Survival**: Navigate a maze filled with interactive objects and a enemy.
+- **Exploration and Survival**: Navigate a maze filled with interactive objects and a deadly enemy.
 - **Ghost Enemy**: Avoid the ghost that chases the player. Use snowballs to temporarily stop it for 5 seconds.
 - **Resource Management**: Manage stamina, flashlight batteries, and snowball supplies to escape the maze.
 
@@ -21,20 +21,24 @@ In Maze Of the Ghost, players take control of a character exploring a maze while
 - **Walking and Sprinting**: Move around the environment, with sprinting consuming stamina.
 - **Flashlight**: Essential for visibility; deactivates when batteries run out.
 - **Snowball Throwing**: Aim and throw snowballs to defend against ghosts.
+- **Animated Hand**: Adds realism as the player interacts with the environment and throws snowballs.
 
 ### Collectible Items
 - **Key**: Unlock the hidden door to progress toward victory.
 - **Batteries**: Recharge flashlight power.
 - **Snowballs**: Increase your throwable snowball count.
 
+### User Interface
+- **Main Menu**: A polished menu to start the game, adjust settings, or exit.
+- **Pause Menu**: Allows players to pause the game, resume, or access game settings during gameplay.
+
 ### Immersive Environment
 - **Camera Effects**: Bobbing and mouse-controlled rotation for added realism.
-- **Audio Feedback**: Sounds for key pickup, stamina depletion, and ghost interactions create a better experience for the game.
+- **Audio Feedback**: Sounds for key pickup, stamina depletion, and ghost interactions enhance the gameplay experience.
 
 ### Victory and Failure
 - **Win Condition**: Collect a key, unlock the exit door, and escape the maze.
 - **Lose Condition**: Get caught by a ghost and trigger the game over screen.
-
 ---
 
 ## 🛠️ Game Mechanics
@@ -119,6 +123,7 @@ In Maze Of the Ghost, players take control of a character exploring a maze while
 - 3d Ghost Model From: [https://assetstore.unity.com/packages/3d/characters/little-ghost-lowpoly-free-271926](https://assetstore.unity.com/packages/3d/characters/little-ghost-lowpoly-free-271926)
 - 3d Key Model From: [https://assetstore.unity.com/packages/3d/props/rust-key-167590](https://assetstore.unity.com/packages/3d/props/rust-key-167590)
 - 3d Snowball Model From: [https://assetstore.unity.com/packages/2d/textures-materials/water/stylize-snow-texture-153579](https://assetstore.unity.com/packages/2d/textures-materials/water/stylize-snow-texture-153579)
+- 3d Hand Model From : [https://assetstore.unity.com/packages/3d/characters/stylized-simple-hands-221297](https://assetstore.unity.com/packages/3d/characters/stylized-simple-hands-221297)
 - Sky Texture From: [https://assetstore.unity.com/packages/2d/textures-materials/sky/allsky-free-10-sky-skybox-set-146014](https://assetstore.unity.com/packages/2d/textures-materials/sky/allsky-free-10-sky-skybox-set-146014)
   
 ### **Audio**: 
