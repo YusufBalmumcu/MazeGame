@@ -25,8 +25,8 @@ public class Move_Player_Script : MonoBehaviour
     {
         // Initial setup for stamina control, cursor, and Rigidbody
         staminaControlScript = GetComponent<Stamina_Control_Script>();
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        // Cursor.visible = false;
+        // Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = 1f;
 
         rb = GetComponent<Rigidbody>();
@@ -43,7 +43,7 @@ public class Move_Player_Script : MonoBehaviour
     private void Update()
     {
         // Handles ground checks, speed control, drag, and sprint input
-        OnApplicationFocus();
+        // OnApplicationFocus();
         CheckGround();
         ControlSpeed();
         HandleSprintInput();

@@ -27,6 +27,8 @@ public class Collision_Script : MonoBehaviour
 
     public Battery_Control_Script batteryControlScript;
 
+    public Animator hand;
+
     void Start()
     {
         batteryControlScript = GetComponent<Battery_Control_Script>();
@@ -55,6 +57,8 @@ public class Collision_Script : MonoBehaviour
                 x.AddForce(cameraTransform.forward * throwForce, ForceMode.Impulse);
             }
             currentSnowballs--;
+            hand.SetTrigger("throw");
+            hand.SetTrigger("idle");
             UpdateSnowballText();
         }
     }
@@ -65,6 +69,8 @@ public class Collision_Script : MonoBehaviour
         if (other.gameObject.tag == "key")
         {
             Destroy(other.gameObject);
+            hand.SetTrigger("collect");
+            hand.SetTrigger("idle");
             keycollected = true;
             keyaudio.Play();
         }
@@ -72,6 +78,8 @@ public class Collision_Script : MonoBehaviour
         if (other.gameObject.tag == "door" && keycollected == true)
         {
             dooropenaudio.Play();
+            hand.SetTrigger("open");
+            hand.SetTrigger("idle");
             other.gameObject.transform.rotation = Quaternion.Euler(0f, -90f, 0f);
             Invoke("WinScene", 1f);
         }
@@ -86,6 +94,8 @@ public class Collision_Script : MonoBehaviour
         if (other.gameObject.tag == "snowball")
         {
             Destroy(other.gameObject);
+            hand.SetTrigger("collect");
+            hand.SetTrigger("idle");
             currentSnowballs++;
             UpdateSnowballText();
             itempickupaudio.Play();
@@ -102,6 +112,8 @@ public class Collision_Script : MonoBehaviour
         {
             Debug.Log("Battery Collected");
             Destroy(other.gameObject);
+            hand.SetTrigger("collect");
+            hand.SetTrigger("idle");
             itempickupaudio.Play();
             batteryControlScript.playerBatteryLife++;
             batteryControlScript.batteryProgressUI.fillAmount = (float)batteryControlScript.playerBatteryLife / (float)batteryControlScript.maxBatteryLife;
