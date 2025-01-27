@@ -1682,4 +1682,8 @@ ScriptsOnlyBuild:
   - Assets/Scenes/LoseScene.unity
   - Assets/Scenes/ControlsScene.unity
   - Assets/Scenes/OptionsScene.unity
+<<<<<<< HEAD
   playerPath: "D:/her\u015Fey/turkey idea/ottoman"
+=======
+  playerPath: C:/Users/lvlen/Desktop/aaa
+>>>>>>> f3b61c2b2934973912fe5f5ac700e38fab285e98
