@@ -25,7 +25,6 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
-    - TMPro.TMP_SubMeshUI
     - TMPro.TextMeshProUGUI
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
@@ -45,7 +44,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
-    - UnityEngine.UI.LayoutElement
     - UnityEngine.UI.Shadow
     - UnityEngine.UI.Slider
   serializedClasses:
@@ -86,6 +84,9 @@ ScriptsOnlyBuild:
     fullTypeName: Button_Script
     methodName: Options
   - assembly: Assembly-CSharp
+    fullTypeName: Game_Music_Script
+    methodName: GameMusicDegeri
+  - assembly: Assembly-CSharp
     fullTypeName: Button_Script
     methodName: Game
   - assembly: Assembly-CSharp
@@ -98,11 +99,17 @@ ScriptsOnlyBuild:
     fullTypeName: Pause_Menu_Script
     methodName: LoadMenu
   - assembly: Assembly-CSharp
+    fullTypeName: Game_Music_Script
+    methodName: GameMusicDegeri
+  - assembly: Assembly-CSharp
     fullTypeName: Button_Script
     methodName: Game
   - assembly: Assembly-CSharp
     fullTypeName: Button_Script
     methodName: Game
+  - assembly: Assembly-CSharp
+    fullTypeName: Game_Music_Script
+    methodName: GameMusicDegeri
   - assembly: Assembly-CSharp
     fullTypeName: Button_Script
     methodName: Menu
@@ -128,6 +135,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
     - Class: 104
@@ -137,11 +148,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1602}
     - Class: 114
+      Script: {instanceID: 2052}
+    - Class: 114
+      Script: {instanceID: 2390}
+    - Class: 114
       Script: {instanceID: 2612}
     - Class: 114
       Script: {instanceID: 2816}
     - Class: 114
       Script: {instanceID: 3106}
+    - Class: 114
+      Script: {instanceID: 4974}
     - Class: 114
       Script: {instanceID: 5046}
     - Class: 114
@@ -167,6 +184,12 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 241
+      Script: {instanceID: 0}
+    - Class: 243
+      Script: {instanceID: 0}
+    - Class: 245
       Script: {instanceID: 0}
     Assets/Scenes/GameScene.unity:
     - Class: 1
@@ -216,9 +239,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1790}
     - Class: 114
+      Script: {instanceID: 2052}
+    - Class: 114
       Script: {instanceID: 2146}
     - Class: 114
       Script: {instanceID: 2350}
+    - Class: 114
+      Script: {instanceID: 2390}
     - Class: 114
       Script: {instanceID: 2612}
     - Class: 114
@@ -233,6 +260,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 4032}
     - Class: 114
       Script: {instanceID: 4566}
+    - Class: 114
+      Script: {instanceID: 4974}
     - Class: 114
       Script: {instanceID: 5046}
     - Class: 114
@@ -274,6 +303,12 @@ ScriptsOnlyBuild:
     - Class: 224
       Script: {instanceID: 0}
     - Class: 225
+      Script: {instanceID: 0}
+    - Class: 241
+      Script: {instanceID: 0}
+    - Class: 243
+      Script: {instanceID: 0}
+    - Class: 245
       Script: {instanceID: 0}
     Assets/Scenes/LoseScene.unity:
     - Class: 1
@@ -396,6 +431,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2188}
     - Class: 114
+      Script: {instanceID: 2390}
+    - Class: 114
       Script: {instanceID: 2612}
     - Class: 114
       Script: {instanceID: 2816}
@@ -407,6 +444,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 4088}
     - Class: 114
       Script: {instanceID: 4338}
+    - Class: 114
+      Script: {instanceID: 4974}
     - Class: 114
       Script: {instanceID: 5046}
     - Class: 114
@@ -436,6 +475,12 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 241
+      Script: {instanceID: 0}
+    - Class: 243
+      Script: {instanceID: 0}
+    - Class: 245
       Script: {instanceID: 0}
     Assets/Scenes/OptionsScene.unity:
     - Class: 1
@@ -1682,8 +1727,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/LoseScene.unity
   - Assets/Scenes/ControlsScene.unity
   - Assets/Scenes/OptionsScene.unity
-<<<<<<< HEAD
-  playerPath: "D:/her\u015Fey/turkey idea/ottoman"
-=======
-  playerPath: C:/Users/lvlen/Desktop/aaa
->>>>>>> f3b61c2b2934973912fe5f5ac700e38fab285e98
+  playerPath: "D:/her\u015Fey/turkey idea/MazeGame"
