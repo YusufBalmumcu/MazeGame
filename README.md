@@ -102,8 +102,18 @@ In Maze Of the Ghost, players take control of a character exploring a maze while
 - Hayaletin oyuncuya doğru hareketi (transform.rotation,transform.position) Ghost_Script.cs:17
 - Kapının anahtar kontrolü (OnTriggerEnter) Collision_Script.cs:70, 76
 - Oyuncunun kar topunu atması (AddForce) Collision_Script.cs:42
-
-
+---
+## **Final Kısım Görev Dağılımları** [Yusuf Balmumcu, Ahmet Furkan Öcel]
+### Yusuf Balmumcu - 22360859001
+- Pause Menü (20x)
+- Ses ve Müzik (20x)
+- Asenkronizasyon (10x)
+- Farklı State Animasyonlar (10x)
+### Ahmet Furkan Öcel - 23360859729
+- Ana Menü (30x)
+- Ses ve Müzik (10x)
+- Farklı State Animasyonlar (20x)
+---
 ### **Assets**:
 - 3d Battery Model From: [https://assetstore.unity.com/packages/3d/props/mobile-power-ups-free-vol-1-36106](https://assetstore.unity.com/packages/3d/props/mobile-power-ups-free-vol-1-36106)
 - 3d Ghost Model From: [https://assetstore.unity.com/packages/3d/characters/little-ghost-lowpoly-free-271926](https://assetstore.unity.com/packages/3d/characters/little-ghost-lowpoly-free-271926)
